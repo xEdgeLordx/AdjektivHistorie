@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            background-color: rgb(51, 8, 8);
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+        }
+        .StoryText{
+            padding-top: 10%;
+            position: absolute;
+            font-size: 25px;
+            max-width: 750px;
+            color: rgb(73, 41, 18);
+        }
+        .ButtonBoxContainer{
+            position: absolute;
+            padding-top: 60%;
+        }
+        button{
+            background-color: blanchedalmond;
+            font-size: 25px;
+            margin-top: 20%;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+            let Word1 = "____";
+            let Word2 = "____";
+            let Word3 = "____";
+            let Word4 = "____";
+        updateView()
+        function updateView(){
+            
+            app = document.getElementById('app');
+            app.innerHTML = /*html*/`
+            <div class = "container">
+                <img class = "paper" src = "Paper.png">
+
+
+                <div id = story class = "StoryText">In an ancient kingdom, there roamed a ${Word1} stranger. 
+                    The stranger was wanted by all, for he laid claim to a powerful ${Word2}. 
+                    He used this ${Word2} to great effect to get what he wanted, and before long, he had claimed the kingdom for himself.
+                    The stranger ruled with an iron fist for hundreds of years... Until one day, a hero arose. A hero of great might and stature. A brave ${Word3}... A ${Word3} with untold potential,
+                     blessed by the gods to wield the powers of the divine. The ${Word3} who would face any danger with courage and who would save us all.<br><br>
+                     Yes, on this day, 5000 years ago, the hero ${Word3} faced the evil stranger. The battle was fierce, and countless lives were lost. Unseen magics were unleashed into the world when the forces of light clashed against the forces of evil.
+                     When the dust settled, only one remained... ${Word4} stood victorious and changed all our fates forever. Or that's how the story goes, at least... Who's to say if it happened or not? Does it really matter?
+
+
+
+                    
+                    </div>
+
+
+<div class = "ButtonBoxContainer">
+                <div class = "ButtonBox">
+                    <div class = "StoryText">Word 1:</div>
+                    <button onclick = "SelecetWord1(this)">tall</button>
+                    <button onclick = "SelecetWord1(this)">dark</button>
+                    <button onclick = "SelecetWord1(this)">shady</button>
+                    <button onclick = "SelecetWord1(this)">short</button>
+                    <br>
+                    <div class = "StoryText">Word 2:</div>
+                    <button onclick = "SelecetWord2(this)">staff</button>
+                    <button onclick = "SelecetWord2(this)">treasure</button>
+                    <button onclick = "SelecetWord2(this)">magic</button>
+                    <button onclick = "SelecetWord2(this)">artifact</button>
+                    <br>
+                    <div class = "StoryText">Word 3:</div>
+                    <button onclick = "SelecetWord3(this)">man</button>
+                    <button onclick = "SelecetWord3(this)">woman</button>
+                    <button onclick = "SelecetWord3(this)">child</button>
+                    <button onclick = "SelecetWord3(this)">goblin</button>
+                    <br>
+                    <div class = "StoryText">Word 4:</div>
+                    <button onclick = "SelecetWord4(this)">The stranger</button>
+                    <button onclick = "SelecetWord4(this)">The hero</button>
+                </div>
+                </div>
+                
+                
+                
+                
+
+            
+            
+            
+            `
+
+
+
+        }
+        function SelecetWord1(choice){
+            Word1 = choice.innerHTML;
+            updateView()
+        }
+        function SelecetWord2(choice){
+            Word2 = choice.innerHTML;
+            updateView()
+        }
+        function SelecetWord3(choice){
+            Word3 = choice.innerHTML;
+            updateView()
+        }
+        function SelecetWord4(choice){
+            Word4 = choice.innerHTML;
+            updateView()
+        }
+        
+
+
+
+
+
+    </script>
+</body>
+</html>
